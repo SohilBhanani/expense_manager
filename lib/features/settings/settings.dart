@@ -80,7 +80,7 @@ class _SettingsState extends State<Settings> {
             children: [
               Text(
                 appVersion == null ? 'loading' : "v-$appVersion",
-                style: TS.b14(clr: MyColors.greyShade1),
+                style: const TS.b14(clr: MyColors.greyShade1),
               )
             ],
           )

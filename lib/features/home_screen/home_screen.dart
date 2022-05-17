@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-import '../../core/style/style.dart';
 import '../database/data/account_datasource.dart';
 import '../pdf/bloc/pdf_bloc.dart';
 import 'cubit/accounts_cubit.dart';

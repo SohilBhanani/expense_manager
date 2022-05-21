@@ -1,4 +1,6 @@
 import 'package:account_manager/core/widgets/expanded_section.dart';
+import 'package:account_manager/features/like_and_share/like_button.dart';
+import 'package:account_manager/features/like_and_share/share_button.dart';
 import 'package:account_manager/features/pdf/bloc/pdf_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,27 +23,9 @@ class AccountScreenExpansionDrawer extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
         child: Row(
           children: [
-            Btn.withIcon(
-                width: 60,
-                height: 60,
-                onPressed: () {},
-                label: 'Like',
-                labelStyle: const TS.sb12(clr: MyColors.greyShade3),
-                icon: const Icon(
-                  Icons.favorite,
-                  color: MyColors.greyShade3,
-                )),
+            const LikeButton(),
             UIH.horzGapSmall,
-            Btn.withIcon(
-                width: 60,
-                height: 60,
-                onPressed: () {},
-                label: 'Share',
-                labelStyle: const TS.sb12(clr: MyColors.greyShade3),
-                icon: const Icon(
-                  Icons.share,
-                  color: MyColors.greyShade3,
-                )),
+            const ShareButton(),
             UIH.horzGapSmall,
             Expanded(
               child: Btn(

@@ -9,8 +9,8 @@ import 'package:intl/intl.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
-const String defaultDatabasePath =
-    '/data/data/com.example.account_manager/databases/account_database.db';
+// const String defaultDatabasePath =
+//     '/data/data/com.sohilbhanani.account_manager/databases/account_database.db';
 
 class BackupAndRestore {
   //for generating unique name everytime user backup
@@ -29,7 +29,10 @@ class BackupAndRestore {
 
   Future<void> backup() async {
     //path of database file
-    File source1 = File(defaultDatabasePath);
+    final String path = await getDatabasesPath();
+    // File source1 = File(defaultDatabasePath);
+    log("~~~~~~~~~~" + join(path, 'account_database.db'));
+    File source1 = File(join(path, 'account_database.db'));
 
     final params = SaveFileDialogParams(
       sourceFilePath: source1.path,

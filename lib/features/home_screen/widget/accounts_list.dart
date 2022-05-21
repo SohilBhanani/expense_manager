@@ -92,6 +92,7 @@ class _AccountTileState extends State<AccountTile> {
           value: BlocProvider.of<AccountsCubit>(context),
           child: AccountScreen(accountData: accountData),
         ));
+
     _loadInterstitialAd(accountData);
   }
 

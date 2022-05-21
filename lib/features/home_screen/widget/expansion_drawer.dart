@@ -7,6 +7,8 @@ import 'package:account_manager/features/settings/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../like_and_share/like_button.dart';
+import '../../like_and_share/share_button.dart';
 import '../../pdf/bloc/pdf_bloc.dart';
 import '../cubit/accounts_cubit.dart';
 
@@ -87,27 +89,9 @@ class ExpansionDrawer extends StatelessWidget {
                       )),
                 ),
                 UIH.horzGapSmall,
-                Btn.withIcon(
-                    width: 60,
-                    height: 60,
-                    onPressed: () {},
-                    label: 'Like',
-                    labelStyle: const TS.sb12(clr: MyColors.greyShade3),
-                    icon: const Icon(
-                      Icons.favorite,
-                      color: MyColors.greyShade3,
-                    )),
+                const LikeButton(),
                 UIH.horzGapSmall,
-                Btn.withIcon(
-                    width: 60,
-                    height: 60,
-                    onPressed: () {},
-                    label: 'Share',
-                    labelStyle: const TS.sb12(clr: MyColors.greyShade3),
-                    icon: const Icon(
-                      Icons.share,
-                      color: MyColors.greyShade3,
-                    )),
+                const ShareButton(),
               ],
             )
           ],
